@@ -1,198 +1,353 @@
-/*---------------------------------------------------------------------------------------------*/
-/*-------------------------------------CSS for all pages---------------------------------------*/
-/*----------------------------------------§§§--------------------------------------------------*/
+/*
+    || CSS GLOBAL FOR ALL PAGE (HEADER, FOOTER, FONTS, SIDEBAR)
+*/
+/*---------
+    || FONTS
+----------------*/
+/* BEYNO */
+@font-face {
+    src: url('../fonts/BEYNO/BEYNO.ttf');
+    font-family: 'BEYNO';
+}
 
-                                    /*font à utiliser*/
-/*BEYNO*/
+/* Cantarell */
 @font-face {
-    font-family: BEYNO;
-    src: url("../fonts/BEYNO/BEYNO.ttf");
+    src: url('../fonts/Cantarell/Cantarell-Regular.ttf');
+    font-family: 'Cantarell';
 }
-/*Panthera*/
+
+/* Panthera */
 @font-face {
-    font-family: Panthera;
-    src: url(../fonts/Panthera/PantheraRegular-MVZ9J.ttf);
+    src: url('../fonts/Panthera/PantheraRegular-MVZ9J.ttf');
+    font-family: 'Panthera';
 }
-/*Wakanda forever*/
+
+/* wakanda forever */
 @font-face {
-    font-family: Wakanda forever;
-    src: url(../fonts/Wakanda/WakandaForever-Regular.ttf);
+    src: url('../fonts/wakanda_forever/WakandaForever-Regular.ttf');
+    font-family: 'Wakanda forever';
 }
-/*Cantarell*/
-@font-face {
-    font-family: Cantarell;
-    src: url(../fonts/Cantarell/Cantarell-Regular.ttf);
-}
-/*couleurs*/
-:root{
-    --blanc: #FFFFFF;
-    --blanc-rose: #F2CEF2;
-    --gris-clair: #9E91B7;
-    --rose-foncee: #DF99F2;
-    --violet: #3D2DA6;
-    --bleu-noir: #07338C;
-    --noir:#021740; /* rgb(2,23,64) */
-}
+
 html {
     font-size: 1vw;
-    font-family: "Cantarell";
-    margin-bottom: 3.66vw;
 }
 
-/*design header*/
-.style-header{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 90%;
-    margin:0 auto;
-}
-.style-header .logo img{
-    vertical-align: middle;
-}
-.style-header .logo .logo-sayna{
-    width: 2.4vw;
-}
-.style-header .logo .logo-x{
-    width: 1vw;
-}
-.style-header .logo .logo-marvel{
-    width: 6vw;
-}
-.style-header ul li{
-    display: inline-block;
-    list-style: none;
-    margin: 1.09vw;
-    font-family: "BEYNO";
-}
-.style-header ul li a{
-    color: var(--rose-foncee);
+body {
+/*    background-image: url('../images/all/arrière_plan.png');*/
+    background: radial-gradient(126.67% 350.28% at -21.35% 0%, #11213F 0%, #0B0B0B 39.1%, rgba(2, 23, 64, 0.837641) 94.57%, rgba(2, 23, 64, 0) 100%);
+    overflow-x: hidden;
+    font-family: 'Cantarell';
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #fff;
 }
 
-/*footer*/
-footer{
-    font-family: "Cantarell";
-    font-size: 0.73vw;
-}
-/*partie gauche*/
-.footer{
-    background-image: url(../images/all/back_footer.png);
-    margin-left: -1%;
-    display: grid;
-    grid-template-columns: 50% 50%;
-    background-position: center;
-    padding-top: 30%;
-    padding-bottom: 3%;
-    margin-bottom: -10%;
-}
-.footer .image-footer{
-    margin-right: 15%;
-    margin-top: -40%;
-    position: relative;
-}
-.footer .right-footer{
-    margin-top: -45%;
-}
-.footer .image-footer .marvel{
-    position:absolute;
-    top: 8vw;
-    left: 28.1vw;
-}
-.footer .image-footer .marvel img{
-    width: 10vw;
-}
-.footer .image-footer img{
-    float: right;
-    width: 40%;
+/* Input text color white */
+input[type="text"] {
+    color: #fff;
 }
 
-/*partie droite*/
-.footer .right-footer{
-    display: grid;
-    grid-template-rows:80% 20% ;
+/* Title */
+h1 {
+    font-family: 'Panthera';
+    font-size: 4.25em; /* font-size to 4.25*pricipal text-size (4.25*16= 68px) */
+    color: #9E91B7;
 }
-.footer .right-footer .suivre{
-    display: grid;
-    grid-template-columns: 50% 50%;
+
+/* Subtitle */
+h2 {
+    font-family: 'BEYNO';
+    font-size: 2em; /* font-size to 2*pricipal text-size (2*16= 32px) */
+    color: #9E91B7;
 }
-h4{
-    color: var(--blanc);
-    font-family: "Cantarell";
+
+/* Other subtile */
+h2[class='wakanda-forever'] {
+    font-family: 'Wakanda forever';
+    font-size: 2.68em;
+    letter-spacing: 0.15em; /* 0.15*16=2.4px */
+}
+
+h3 {
+    font-family: 'Cantarell';
+    font-size: 2em;
+}
+
+.titre {
+    font-size: 1.5em;
+}
+
+.text {
+    font-family: 'Cantarell';
     font-size: 1em;
-    letter-spacing: 1em;
 }
 
-footer .text-footer{
-    margin-top: 10%;
-}
-footer .text-footer p{
-    color: var(--blanc);
-    font-family: "Cantarell";
-    font-size: 0.73vw;
-}
-.footer .right-footer .social-symbole img{
-    margin: 0.73vw;
-    width: 3.29vw;
-}
-.footer .right-footer .suivre .suivre-social{
-    margin-left: -30%;
-    margin-bottom: 5%;
-}
-.footer .right-footer .loi p{
-    color: var(--blanc);
-    font-size: 0.73vw;
-    font-family: "Cantarell";
-    margin-top: -5%;
+/* Specifics font for all citation text */
+.text-citation {
+    font-family: 'Cantarell';
+    font-size: 0.87em;
 }
 
-/*position fixe barre laterale*/
-.scrolling {
-    position:fixed ;
+/* Specifics font for the footer text */
+.text-footer {
+    font-family: 'Cantarell';
+    font-size: 0.62em;
 }
 
-/*animation menu de navigation*/
-#header .style-header a:hover{
-    color: var(--rose-foncee);
+/* Specified align center for all text with class 'center' */
+.center {
+    text-align: center;
+}
+
+/*
+    || STYLE FOR HEADER
+*/
+header {
+    padding: 2% 10%;
+}
+
+header nav {
+    display: flex;
+    justify-content: space-between; /* Space between each items in nav */
+}
+
+header nav ul {
+    display: flex;
+    justify-content: space-between; /*  */
+    width: 20vw; /* 20% of screen width */
+}
+
+/* Style for logo */
+h1[class='logo'] {
+    background-image: url('../images/all/icon_SAYNA.png'), /* Sayna icon */
+                      url('../images/all/icon_x.png'), /* x icon */
+                      url('../images/all/icon_MARVEL.png'); /* Marvel icon */
+    width: 20vw; /* 20% of screen width */
+    height: 5vw; /* 5% of screen width */
+    background-repeat: no-repeat;
+    padding: 0;
+    margin-top:  -1%;
+    background-size: 15%, 7%, 40%; /* size of each background */
+    background-position: 0 0, 3vw 1vw, 5vw 0; /* position of each background */
+    filter: invert(0%) hue-rotate(0deg) saturate(100%);
+    transition: filter 0.3s; /* reverse color of logo (20%) (grey) */
+    cursor: pointer;
+}
+
+h1[class='logo']:hover {
+    filter: invert(64%) sepia(8%) saturate(1033%) hue-rotate(219deg) brightness(91%) contrast(90%);/* remove color reverse if cursor passed */
+}
+
+a {
+    text-decoration: none; /* remove underline for link */
+}
+
+ul li {
+    list-style-type: none; /* remove style type */
+}
+
+ul[class='nav'] li {
+    display: inline-flex;
+}
+
+ul li a {
+    list-style-type: none;
+    font-family: 'BEYNO';
+    color: #fff;
+}
+
+ul li[class='active'] a  {
+    font-weight: bolder;
+    text-decoration: underline;
+    color: #9E91B7;
+}
+
+ul li a:hover {
     text-decoration: underline;
 }
 
-/* animation enigme boutton ENVOYER || Effet de surbrillance */
-.langage button[type='submit']:hover {
-    box-shadow: 0px 0px 20px #F2CEF2;
+main {
+    padding-bottom:5%;
+}
+
+
+/*
+    || STYLE FOR FOOTER
+*/
+footer h2 {
+    font-family: 'Cantarell';
+    letter-spacing: 0.75em;
+    font-size: 1em;
+}
+
+/* SIDEBAR */
+aside {
+    height: 30vw;
+    display: grid;
+    width: 1vw;
+    border-left: 3px solid #9E91B7;
+    float: left;
+    position: absolute;
+    top:  0;
+    left: 4vw;
+    display: grid;
+    grid-template-rows: 2fr 1fr;
+    position: fixed;
+    transition: transform 0.3s ease-in-out;
+}
+
+aside .ligne {
+    grid-row: 1;
+    border-right: 3px solid #9E91B7;
+    width: 50%;
+}
+
+aside .social-networks {
+    grid-row: 2;
+    margin-left: -30%;
+}
+
+aside ul li {
+    margin-top: 5%;
+}
+
+aside ul li:hover {
+    filter: brightness(0) invert(1);
+}
+
+/* GRID FOOTER */
+footer ul {
+    display: flex;
+    justify-content: space-between;
+    padding-inline-start: 3%;
+    width: 20vw;
+}
+
+footer {
+    background: linear-gradient(to bottom, #3D2DA6, #021740);
+    margin-left: -1%;
+    height: 40vw;
+    width: 100vw;
+    display: grid; /* Define display grid */
+    grid-template-columns: 1fr 1fr; /* Grid contains 2 columns (1/2 width, 1/2 width) */
+    grid-template-rows: 1fr 4fr; /* Grid contains 2 rows (1/5 height, 4/5 height) */
+}
+
+footer .part-1 {
+    grid-column: 1; /* define the emplacement of this element in: col 1 */
+    grid-row: 2/5;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    padding: 20%;
+    position: relative;
+}
+
+footer .part-1 .img-1 {
+    position: absolute;
+    z-index: 1;
+    width: 20vw;
+    transition: transform 0.3s ease-in-out;
+}
+
+footer .part-1 .img-2 {
+    position: absolute;
+    z-index: 2;
+    width: 10vw;
+    right: 30%;
+    transition: transform 0.3s ease-in-out;
+}
+
+footer .part-2 {
+    grid-column: 2 / 3;
+    grid-row: 2/5;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 1fr 1fr;
+}
+
+footer .part-2-1 {
+    grid-column: 1/2;
+    grid-row: 1;
+}
+
+footer .part-2-1 a {
+    color: #FFFFFF;
+}
+
+footer .part-2-2 {
+    grid-column: 2/3;
+    grid-row: 1;
+}
+
+footer .part-2-2 img {
+    width: 50%;
+}
+
+footer .part-2-3 {
+    grid-column: 1 / 3;
+    grid-row: 2;
+
+}
+
+footer .part-2-1 p {
+    text-transform: capitalize;
+}
+
+/*
+    || ANIMATION
+*/
+/* Effet de surbrillance */
+button:hover {
+    box-shadow: 0px 16px 32px 0px #000;
     cursor: pointer;
 }
-#acteur .rond:hover{
-    box-shadow: 0px 0px 20px #F2CEF2;
-    cursor: pointer;
-}
 
-/*animation contact boutton ENVOYER*/
-.contact button[type='submit']:hover{
-    box-shadow: 0px 0px 20px #021740;
-    cursor: pointer;
-}
-
-/*animation logo reseaux sociaux || coloration*/
-.container .vertical-icon ul a img:hover{
-    filter: brightness(0) invert(1) grayscale(100%) brightness(1);
-}
-
-/*animation logo header || coloration*/
-.style-header .logo a img:hover{
-    filter: brightness(70%) saturate(200%) contrast(150%) hue-rotate(270deg);
-}
-
-/*animation footer || zoom*/
-.image-footer:hover{
+/* Effet de zoom */
+footer .part-1:hover .img-1, footer .part-1:hover .img-2 {
     transform: scale(1.1);
-    cursor: pointer;
-}
-.right-footer img:hover{
-    transform: scale(1.1);
 }
 
-/* definition fade in venant de gauche*/
-@keyframes fade-in-left {
+footer .part-2-2 img {
+    transition: transform 0.3s ease-in-out;
+}
+
+footer .part-2-2 img:hover {
+    transform: scale(1.3);
+}
+
+/* FADE IN */
+.fade-in {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateX(-4em); 
+    transition: opacity 3s ease, visibility 3s ease, transform 3s ease;
+}
+
+.fade-in-top {
+    animation-name: fade-in-top;
+    animation-duration: 6s;
+}
+
+/* define fade-in animation from left */
+@keyframes fade-in-top {
+    from {
+        opacity: 0; /* from opacity 0 */
+        transform: translateY(-100%); /* from left -50px */
+    }
+    to {
+        opacity: 1; /* to opacity 1 */
+        transform: translateY(0); /* to true position */
+    }
+}
+
+.fade-in-start {
+    animation-name: fade-in;
+    animation-duration: 3s;
+}
+
+/* define fade-in animation from left */
+@keyframes fade-in {
     from {
         opacity: 0; /* from opacity 0 */
         transform: translateX(-50px); /* from left -50px */
@@ -203,31 +358,14 @@ footer .text-footer p{
     }
 }
 
-/* Fade in left */
-section, #header {
-    animation-name: fade-in-left;
-    animation-duration: 2s;
+h1:hover, h2:hover {
+    transform: scale(1.1);
+    transition: transform 2s ease-in-out;
 }
 
-/* definition fade in venant de haut*/
-@keyframes fade-in-up {
-    from {
-        opacity: 0; /* from opacity 0 */
-        transform: translateY(-200px); /* from up -200px */
-    }
-    to {
-        opacity: 1; /* to opacity 1 */
-        transform: translateY(0); /* to true position */
-    }
-}
-
-/* fade in down */
-.scrolling {
-   animation-name: fade-in-up;
-   animation-duration: 2s;
-}
-/*animation boutton A propos et Wakanda*/
-.footer .right-footer .suivre .suivre-page p a{
-    text-decoration: none;
-    color: var(--blanc);
+#canvas-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    pointer-events: none;
 }
